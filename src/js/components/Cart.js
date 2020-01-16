@@ -123,16 +123,16 @@ class Cart {
     }
     thisCart.totalPrice = thisCart.subtotalPrice + thisCart.deliveryFee;
     //console.log('totalNumber:', thisCart.totalNumber);
-    console.log('subtotalPrice:', thisCart.subtotalPrice);
-    console.log('CartProduct', thisCart.products);
+    //console.log('subtotalPrice:', thisCart.subtotalPrice);
+    //console.log('CartProduct', thisCart.products);
     //console.log('totalPrice:', thisCart.totalPrice);
     //console.log('deliveryFee:', thisCart.deliveryFee);
 
     for (let key of thisCart.renderTotalsKeys) {
-      console.log('key', key);
+      //console.log('key', key);
       for (let elem of thisCart.dom[key]) {
         elem.innerHTML = thisCart[key];
-        console.log('elem', elem);
+        //console.log('elem', elem);
       }
     }
   }
@@ -142,7 +142,7 @@ class Cart {
     const thisCart = this;
     const index = thisCart.products.indexOf['cartProduct'];
 
-    console.log('cartProduct', index);
+    //console.log('cartProduct', index);
 
     thisCart.products.splice(index, 1);
 

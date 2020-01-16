@@ -16,7 +16,7 @@ class Product {
     thisProduct.initAmountWidget();
     thisProduct.procesOrder();
 
-    console.log('new Product:', thisProduct);
+    //console.log('new Product:', thisProduct);
   }
   renderInMenu() {
     const thisProduct = this;
@@ -109,8 +109,7 @@ class Product {
     //console.log('Price', price);
 
     const formData = utils.serializeFormToObject(thisProduct.form);
-    console.log('formData', formData);
-
+    //console.log('formData', formData);
 
     /* START LOOP: for each paramId in thisProduct.data.params */
     /* save the element in thisProduct.data.params with key paramId as const param */
@@ -124,8 +123,7 @@ class Product {
       /* save the element in param.options with key optionId as const option */
       for (let optionId in param.options) {
         const option = param.options[optionId];
-
-        console.log('option:', optionId);
+        //console.log('option:', optionId);
 
         /* START IF: if option is selected and option is not default */
         /* add price of option to variable price */
