@@ -157,6 +157,12 @@
 
     }
 
+    &.selected {
+      cursor: pointer;
+      background-color: #56BF23;
+      opacity: 0.4;
+    }
+
     &.booked {
       cursor: not-allowed;
       color: lighten($color-dark, 40%);

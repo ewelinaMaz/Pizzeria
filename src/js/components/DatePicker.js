@@ -46,9 +46,9 @@ class DatePicker extends BaseWidget{
       },
     });
   }
-
+  /* Add converting date method */
   parseValue(value){
-    return value;
+    return utils.dateToStr(utils.addDays(value[0], 1));
   }
 
   isValid(){
