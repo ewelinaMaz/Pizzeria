@@ -1,10 +1,13 @@
 import BaseWidget from './BaseWidget.js';
 import utils from '../utils.js';
-import {select, settings} from '../settings.js';
+import {
+  select,
+  settings
+} from '../settings.js';
 
-class DatePicker extends BaseWidget{
+class DatePicker extends BaseWidget {
 
-  constructor(wrapper){
+  constructor(wrapper) {
     super(wrapper, utils.dateToStr(new Date()));
 
     const thisWidget = this;
@@ -47,16 +50,15 @@ class DatePicker extends BaseWidget{
     });
   }
   /* Add converting date method */
-  parseValue(value){
+  parseValue(value) {
     return utils.dateToStr(utils.addDays(value[0], 1));
   }
 
-  isValid(){
+  isValid() {
     return true;
   }
 
-  renderValue(){
-  }
+  renderValue() {}
 }
 
 export default DatePicker;
