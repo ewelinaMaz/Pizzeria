@@ -10,6 +10,8 @@
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-grid.css">
+  <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,6 +25,7 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
@@ -64,6 +67,99 @@
   </header>
 
   <div id="pages">
+    <section id="home" class="main-side container">
+      <div class="intro-section">
+        <div class="intro_wrapper">
+          <div class="gallery-intro">
+            <img src="images/pizza/pizza-1.jpg" alt="Order">
+            <a href="#order">
+              <h2>ORDER ONLINE</h2>
+              <h5>Delicious food delivered to your door</h5>
+            </a>
+          </div>
+          <div class="gallery-intro">
+            <img src="images/pizza/pizza-2.jpg" alt="Booking">
+            <a href="#booking">
+              <h2>BOOK A TABLE</h2>
+            </a>
+          </div>
+        </div>
+        <div class="Opening-hours">
+          <h2>OPENING HOURS</h2>
+          <h5>MON - SUN: 12pm - 11pm</h5>
+        </div>
+      </div>
+      <div class="main-carousel">
+        <div class="carousel-cell row">
+          <img class="col-4" src="images/pizza/pizza-3.jpg" alt="First slide">
+          <div class="col-8">
+            <h5>Amazing service</h5>
+            <p>Condimentum condimentum per suspendisse enim massa a nascetur mauris vivamus sociis a imperdiet vestibulum interdum ullamcorper in adipiscing lobortis mi urna vivamus diam.</p>
+            <p class="footer">Margaret Osborne</p>
+          </div>
+        </div>
+
+        <div class="carousel-cell row">
+          <img class="col-4" src="images/pizza/pizza-4.jpg" alt="Second slide">
+          <div class="col-8">
+            <h5>Perfect delivery</h5>
+            <p>Condimentum condimentum per suspendisse enim massa a nascetur mauris vivamus sociis a imperdiet vestibulum interdum ullamcorper in adipiscing lobortis mi urna vivamus diam.</p>
+            <p class="footer">Margaret Osborne</p>
+          </div>
+        </div>
+
+        <div class="carousel-cell row">
+          <img class="col-4" src="images/pizza/pizza-5.jpg" alt="Third slide">
+          <div class="col-8">
+            <h5>Perfect taste</h5>
+            <p>Condimentum condimentum per suspendisse enim massa a nascetur mauris vivamus sociis a imperdiet vestibulum interdum ullamcorper in adipiscing lobortis mi urna vivamus diam.</p>
+            <p class="footer">Margaret Osborne</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="gallery" id="gallery">
+        <div class="gallery-wrapper">
+          <div class="gallery-item">
+            <img src="images/pizza/pizza-4.jpg" alt="image">
+            <a class="heart" href="#"><i class="fas fa-heart"></i></a>
+            <a class="share" href="#"><i class="fas fa-share-alt"></i></a>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/pizza/pizza-5.jpg" alt="image">
+            <a class="heart" href="#"><i class="fas fa-heart"></i></a>
+            <a class="share" href="#"><i class="fas fa-share-alt"></i></a>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/pizza/pizza-6.jpg" alt="image">
+            <a class="heart" href="#"><i class="fas fa-heart"></i></a>
+            <a class="share" href="#"><i class="fas fa-share-alt"></i></a>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/pizza/pizza-7.jpg" alt="image">
+            <a class="heart" href="#"><i class="fas fa-heart"></i></a>
+            <a class="share" href="#"><i class="fas fa-share-alt"></i></a>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/pizza/pizza-8.jpg" alt="image">
+            <a class="heart" href="#"><i class="fas fa-heart"></i></a>
+            <a class="share" href="#"><i class="fas fa-share-alt"></i></a>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/pizza/pizza-9.jpg" alt="image">
+            <a class="heart" href="#"><i class="fas fa-heart"></i></a>
+            <a class="share" href="#"><i class="fas fa-share-alt"></i></a>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -248,6 +344,7 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="vendor/range-slider.min.js"></script>
+  <script src="vendor/flickity.pkgd.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
 

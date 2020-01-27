@@ -71,6 +71,9 @@ export const select = {
   nav: {
     links: '.main-nav a',
   },
+  home: {
+    links: '.gallery-intro a',
+  },
 };
 
 export const classNames = {
