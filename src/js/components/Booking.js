@@ -17,7 +17,7 @@ class Booking {
     thisBooking.render(bookingWidget);
     thisBooking.initWidget();
     thisBooking.getData();
-  //  thisBooking.rangeSliderBG();
+    //  thisBooking.rangeSliderBG();
   }
 
   getData() {
@@ -117,13 +117,11 @@ class Booking {
     const startHour = utils.hourToNumber(hour);
 
     for (let hourBlock = startHour; hourBlock < startHour + duration; hourBlock += 0.5) {
-      //console.log('loop', hourBlock);
+      //console.log('hourBlock', hourBlock);
 
       if (typeof thisBooking.booked[date][hourBlock] == 'undefined') {
         thisBooking.booked[date][hourBlock] = [];
-
       }
-
       thisBooking.booked[date][hourBlock].push(table);
       //console.log('booked.table', table);
     }
@@ -228,6 +226,7 @@ class Booking {
 
     thisBooking.slider = thisBooking.dom.form.querySelector(select.widgets.hourPicker.rangeSlider);
     //console.log('slider', slider);
+
     /* Declare all const */
     const tableAmount = [];
     const colours = [];
@@ -235,36 +234,36 @@ class Booking {
     const startHour = settings.hours.open;
     const endHour = settings.hours.close;
     const linear = [];
-
-    for(let h = startHour; h < endHour; h += 0.5) {
+    console.log('startHour', startHour);
+    for (let h = startHour; h < endHour; h += 0.5) {
       hours.push(h);
     }
 
-    for (let hour of hours){
-      if (!thisBooking.booked[thisBooking.date][hour]){
+    for (let hour of hours) {
+      if (!thisBooking.booked[thisBooking.date][hour]) {
         tableAmount.push(0);
       } else {
         tableAmount.push(thisBooking.booked[thisBooking.date][hour]);
       }
-      console.log(thisBooking.booked[thisBooking.date][hour]);
+      //console.log(thisBooking.booked[thisBooking.date][hour]);
     }
-    console.log('amount', tableAmount);
+    //console.log('amount', tableAmount);
 
-    for (let table of tableAmount){
-      if (table.length == 3){
+    for (let table of tableAmount) {
+      if (table.length == 3) {
         colours.push(settings.param.colours.red);
       } else if (table.length == 2) {
         colours.push(settings.param.colours.orange);
       } else
         colours.push(settings.param.colours.green);
-      console.log('table', table);
-      console.log('colours', colours);
+      //console.log('table', table);
+      //console.log('colours', colours);
     }
 
     let avg = Math.round(100 / colours.length);
     let auxiliary = Math.round(100 / colours.length);
     let begin = 0;
-    console.log('avg', avg);
+
 
     for (let colour of colours) {
       linear.push(colour + ' ' + begin + '%' + ' ' + avg + '%');
@@ -275,8 +274,6 @@ class Booking {
     const colorStyle = linear.join(', ');
 
     thisBooking.slider.style.background = 'linear-gradient(to right,' + colorStyle + ')';
-
-
 
   }
 
