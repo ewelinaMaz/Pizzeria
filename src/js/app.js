@@ -32,7 +32,7 @@ const app = {
       link.addEventListener('click', function(event) {
         const clickedElement = this;
         event.preventDefault();
-        console.log('navLinks', thisApp.navLinks);
+        //console.log('navLinks', thisApp.navLinks);
         /* Get page id from href attribute */
         const id = clickedElement.getAttribute('href').replace('#', '');
 
@@ -116,7 +116,7 @@ const app = {
     const thisApp = this;
 
     const bookingWidget = document.querySelector(select.containerOf.booking);
-    console.log('bookingWidget', bookingWidget);
+    //console.log('bookingWidget', bookingWidget);
 
     thisApp.bookingWidget = new Booking(bookingWidget);
   },
