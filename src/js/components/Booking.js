@@ -233,12 +233,11 @@ class Booking {
     const hours = [];
     const startHour = settings.hours.open;
     const endHour = settings.hours.close;
-    const linear = [];
     console.log('startHour', startHour);
     for (let h = startHour; h < endHour; h += 0.5) {
       hours.push(h);
     }
-
+    /* Find booked tables for each hour */
     for (let hour of hours) {
       if (!thisBooking.booked[thisBooking.date][hour]) {
         tableAmount.push(0);
@@ -248,6 +247,7 @@ class Booking {
       //console.log(thisBooking.booked[thisBooking.date][hour]);
     }
     //console.log('amount', tableAmount);
+    /* Define color rule for booked tables */
 
     for (let table of tableAmount) {
       if (table.length == 3) {
@@ -263,7 +263,7 @@ class Booking {
     let avg = Math.round(100 / colours.length);
     let auxiliary = Math.round(100 / colours.length);
     let begin = 0;
-
+    const linear = [];
 
     for (let colour of colours) {
       linear.push(colour + ' ' + begin + '%' + ' ' + avg + '%');
@@ -272,9 +272,7 @@ class Booking {
     }
 
     const colorStyle = linear.join(', ');
-
     thisBooking.slider.style.background = 'linear-gradient(to right,' + colorStyle + ')';
-
   }
 
   sendBookOrder() {
